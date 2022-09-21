@@ -101,7 +101,7 @@ const getOptions = () => {
       species.push(character.species);
     }
   });
-  console.log(options);
+
   return options;
 };
 
@@ -228,8 +228,10 @@ const createCards = () => {
 const chooseCharacter = (e) => {
   chosenIds.push(parseInt(e.target.id));
   createChosenCards(chosenIds);
+  console.log(chosenIds);
   createCards();
 };
+addEventListenerToChooseButtons();
 
 const removeCharacter = (e) => {
   chosenIds = chosenIds.filter(
