@@ -75,6 +75,7 @@ const printCards = (characters) => {
     characterContainer.appendChild(card);
   });
 };
+printCards(characters);
 
 const cleanCardContainer = () => {
   characterContainer.innerHTML = "";
