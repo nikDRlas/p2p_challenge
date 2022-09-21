@@ -93,11 +93,15 @@ const getOptions = () => {
   const { gender, status, species } = options;
 
   characters.forEach((character) => {
-    gender.push(character.gender);
-    status.push(character.status);
-    species.push(character.species);
+    if (!gender.includes(character.gender)) {
+      gender.push(character.gender);
+    } else if (!status.includes(character.status)) {
+      status.push(character.status);
+    } else if (!species.includes(character.species)) {
+      species.push(character.species);
+    }
   });
-
+  console.log(options);
   return options;
 };
 
